@@ -1,5 +1,5 @@
 <x-layouts.layout title="login">
-    <div class="flex flex-row justify-center items-center min-h-full bg-gray-300">
+    <div class="flex flex-row justify-center items-center min-h-full bg-footer">
         <div class="bg-white p-4 rounded-xl " >
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
