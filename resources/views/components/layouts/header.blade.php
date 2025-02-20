@@ -12,7 +12,7 @@
     @endguest
     @auth
         <form action="{{route("logout")}}" method="post">
-            Hola, {{auth()->user()->name}}
+            <span>Hola, {{auth()->user()->name}} </span>
             @csrf
             <input class="btn btn-sm" type="submit" value="Logout">
         </form>

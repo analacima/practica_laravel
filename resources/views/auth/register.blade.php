@@ -1,5 +1,5 @@
 <x-layouts.layout title="Registro">
-    <div class="flex flex-row justify-center items-center min-h-full bg-gray-300">
+    <div class="flex flex-row justify-center items-center min-h-full bg-main">
         <div class="bg-white p-4 rounded-xl " >
     <form method="POST" action="{{ route('register') }}">
         @csrf
