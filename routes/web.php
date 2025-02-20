@@ -1,11 +1,16 @@
 <?php
 
+use App\Http\Controllers\AlumnoController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
 })->name('home');
+
+Route::get("/alumnos",[AlumnoController::class,'index'])
+    ->middleware('auth')
+    ->name('alumnos');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
