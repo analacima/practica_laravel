@@ -22,8 +22,8 @@ export default {
                 "76v":"76vh"
             },
             colors:{
-                "header":"#fcd5ce",
-                "nav":"#fae1dd",
+                "header":"#f8ad9d",   //"#fcd5ce",
+                "nav": "#fcd5ce",     //"#fae1dd",
                 "main":"#f8edeb",
                 "footer":"#fae1dd"
             }
