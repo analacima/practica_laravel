@@ -1,0 +1,19 @@
+services:
+    mysql:
+        image: mysql
+        ports:
+            - 23306:3306
+        volumes:
+            - ./mysql:/var/lib/mysql
+        environment:
+            - MYSQL_USER=${DB_USERNAME}
+            - MYSQL_PASSWORD=${DB_PASSWORD}
+            - MYSQL_DATABASE=${DB_DATABASE}
+            - MYSQL_ROOT_PASSWORD=root1234
+    phpmyadmin:
+        image: phpmyadmin
+        ports:
+            - 8100:80
+        environment:
+            - PMA_ARBITRARY=1 # permite que accedan máquinas externas
+            - PMA_HOST=mysql # aquí indicamos la máquina (la ip o el nombre del servicio, mysql en este caso)

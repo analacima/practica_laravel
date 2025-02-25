@@ -1,4 +1,3 @@
-
 <x-layouts.layout>
     @guest()
         <div
@@ -17,5 +16,4 @@
             </div>
         </div>
     @endguest
-
 </x-layouts.layout>

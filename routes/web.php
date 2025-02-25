@@ -8,9 +8,10 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get("/alumnos",[AlumnoController::class,'index'])
-    ->middleware('auth')
-    ->name('alumnos');
+Route::resource("alumnos",AlumnoController::class);
+// el método resource crea los entrypoint para resolver la solicitud de un recurso
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -21,5 +22,12 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+
+Route::view("about", "about")->name("about");
+Route::view("noticias", "noticias")->name("noticias");
+Route::view("contacto", "contacto")->name("contacto");
+
+
 
 require __DIR__.'/auth.php';

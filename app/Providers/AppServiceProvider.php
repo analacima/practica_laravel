@@ -4,6 +4,9 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
+//use App\View\Components\Layout;
+
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -20,5 +23,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         //
+        
+
     }
 }
