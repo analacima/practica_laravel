@@ -14,6 +14,6 @@ class AlumnoSeeders extends Seeder
     public function run(): void
     {
         //
-        Alumno::factory()->count(50)->create(); // el modelo llama a la fábrica para que cree 50 veces
+        Alumno::factory()->count(10)->create(); // el modelo llama a la fábrica para que cree 50 veces
     }
 }

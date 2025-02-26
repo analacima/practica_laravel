@@ -17,12 +17,22 @@ class AlumnoController extends Controller
         return view('alumnos.index', ["alumnos" => $alumnos]);
     }
 
+    public function create()
+    {
+        return view('alumnos.create');
+    }
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
-        //
+        //$request tiene un método llamado input que nos devolverá los datos de la solicitud
+        $datos=$request->input();
+        $alumno = new Alumno($datos);
+        $alumno->save();
+
+        return redirect()->route('alumnos.index');
+
     }
 
     /**
@@ -44,8 +54,10 @@ class AlumnoController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Alumno $alumno)
     {
-        //
+        $alumno->delete();
+        return redirect()->route('alumnos.index');
+
     }
 }

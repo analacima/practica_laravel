@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nombre');
             $table->string('dni');
             $table->string('email')->nullable(); // admite valores nulos
-            $table->string('password');
+
             $table->timestamps();
         });
     }

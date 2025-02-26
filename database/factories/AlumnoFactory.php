@@ -21,7 +21,7 @@ class AlumnoFactory extends Factory
             'nombre' => $this->faker->name(),
             'dni' => $this->faker->unique()->randomNumber(9),
             'email' => $this->faker->email(),
-            'password' => bcrypt('123456'),
+
 
         ];
     }
