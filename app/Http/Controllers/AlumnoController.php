@@ -46,17 +46,24 @@ class AlumnoController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Alumno $alumno)
     {
-        //
+        $alumno->update($request->input());
+        session()->flash("status", "Se ha actualizado el alumno $alumno->nombre");
+        return redirect()->route('alumnos.index');
     }
 
+    public function edit(Alumno $alumno){
+
+        return view("alumnos.edit", ["alumno" => $alumno]);
+    }
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(Alumno $alumno)
     {
         $alumno->delete();
+        session()->flash("status", "Se ha borrado el alumno $alumno->nombre");
         return redirect()->route('alumnos.index');
 
     }
