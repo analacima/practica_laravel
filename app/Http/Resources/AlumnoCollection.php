@@ -15,5 +15,13 @@ class AlumnoCollection extends ResourceCollection
     public function toArray(Request $request): array
     {
         return ["data"=>$this->collection];
+
+        /* sería equivalente a:
+        foreach ($this->collection as $alumno) {
+            $data=$this->AlumnoResource($alumno)
+        }
+         return ["data" => $data];
+        }
+        */
     }
 }

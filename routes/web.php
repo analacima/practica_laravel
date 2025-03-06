@@ -8,7 +8,9 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::resource("alumnos",AlumnoController::class);
+
+Route::resource("alumnos",AlumnoController::class)
+    ->middleware('auth'); // si al entrar en alumnos no está autenticado, nos lleva a login
 // el método resource crea los entrypoint para resolver la solicitud de un recurso
 
 
