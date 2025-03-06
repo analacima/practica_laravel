@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\AlumnoResource;
 use App\Models\Alumno;
 use App\Http\Resources\AlumnoCollection;
 use Illuminate\Http\Request;
@@ -21,7 +22,11 @@ class AlumnoApiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // recojo los datos y los guardo
+        $datos=$request->input("data.attributes");
+        $alumno=new Alumno($datos);
+        $alumno->save();
+        return new AlumnoResource($alumno);
     }
 
     /**
