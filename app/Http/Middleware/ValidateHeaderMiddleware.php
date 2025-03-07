@@ -20,7 +20,7 @@ class ValidateHeaderMiddleware
                 "errors" => [
                     "status" => 406,
                     "title" => "Not Acceptable",
-                    "datails"=>"Value Field Accept is not acceptable"
+                    "details"=>"Value Field Accept is not acceptable"
                 ]
             ],406);
         return $next($request);

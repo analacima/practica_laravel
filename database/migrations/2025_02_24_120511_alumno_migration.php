@@ -14,8 +14,9 @@ return new class extends Migration
         Schema::create('alumnos', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            $table->string('dni');
-            $table->string('email')->nullable(); // admite valores nulos
+            $table->string('dni')->unique();
+            $table->string('email')->unique(); //
+            // nullable - admite valores nulos
 
             $table->timestamps();
         });

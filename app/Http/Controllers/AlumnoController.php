@@ -32,8 +32,8 @@ class AlumnoController extends Controller
 
         $alumno = new Alumno($datos);
         $alumno->save();
-
-        return redirect()->route('alumnos.index');
+        session()->flash("status","Se ha creado el alumno $alumno->nombre");
+        return redirect(route('alumnos.index'));
 
     }
 
@@ -52,7 +52,7 @@ class AlumnoController extends Controller
     {
         $alumno->update($request->input());
         session()->flash("status", "Se ha actualizado el alumno $alumno->nombre");
-        return redirect()->route('alumnos.index');
+        return redirect()-> route('alumnos.index');
     }
 
     public function edit(Alumno $alumno){
@@ -66,7 +66,7 @@ class AlumnoController extends Controller
     {
         $alumno->delete();
         session()->flash("status", "Se ha borrado el alumno $alumno->nombre");
-        return redirect()->route('alumnos.index');
+        return redirect(route('alumnos.index'));
 
     }
 }

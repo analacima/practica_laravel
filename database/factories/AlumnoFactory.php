@@ -27,7 +27,9 @@ class AlumnoFactory extends Factory
             //
             'nombre' => $this->faker->name(),
             'dni' => $this->dni(),
-            'email' => fake()->safeEmail()
+            'email' => fake()->unique()->safeEmail()
+            // podemos usar indistintamente $this->faker que fake()
+
         ];
     }
 }

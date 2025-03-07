@@ -1,6 +1,6 @@
 {{-- Diseño para escritorio --}}
 <header class="hidden md:flex h-10v bg-header flex flex-row justify-between items-center  p-3 ">
-    <img  class ="h-16 max-h-full" src="{{asset("images/logo.svg")}}" alt="logo">
+    <img  class ="h-16 max-h-full" src="{{asset("images/logo_sin_fondo.png")}}" alt="logo">
     <h1 class ="text-5xl text-white " >GESTIÓN CENTRO</h1>
     <div>
         @guest
