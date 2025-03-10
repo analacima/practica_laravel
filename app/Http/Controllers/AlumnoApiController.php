@@ -9,22 +9,36 @@ use App\Http\Resources\AlumnoCollection;
 use Illuminate\Http\Request;
 use Illuminate\Session\Store;
 
+
+/**
+ *      *
+ * @OA\Info (
+ *      title="API para consultar alumnos",
+ *      version="1.0.0",
+ *      description="Esta API permite interactuar con los alumnos de la base de datos de la escuela",
+ *      @OA\Contact(
+ *          name="Ana",
+ *          email="ana.lacima@gmail.com"
+ *      ),
+ *      @OA\License(
+ *          name="MIT",
+ *          url="https://opensource.org/license/mit"
+ *      )
+ * )
+ */
 class AlumnoApiController extends Controller
 {
     /**
-     *      *
-     * @OA\Info (
-     *      title="API para consultar alumnos",
-     *      version="1.0.0",
-     *      description="Esta API permite interactuar con los alumnos de la base de datos de la escuela",
-     *      @OA\Contact(
-     *          email="ana.lacima@gmail.com"
-     *      ),
-     *      @OA\License(
-     *          name="MIT",
-     *          url="https://opensource.org/license/mit"
-     *      )
+     * @OA\Get (
+     *     path="/api/alumnos",
+     *     operationId="GetAlumnos",
+     *     @OA\Response(
+     *         response=200,
+     *          description="Se listan todos los alumnos"
+     *     )
+     *
      * )
+     *
      */
     public function index()
     {

@@ -1,0 +1,28 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API para consultar alumnos",
+        "description": "Esta API permite interactuar con los alumnos de la base de datos de la escuela",
+        "contact": {
+            "name": "Ana",
+            "email": "ana.lacima@gmail.com"
+        },
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/license/mit"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/alumnos": {
+            "get": {
+                "operationId": "GetAlumnos",
+                "responses": {
+                    "200": {
+                        "description": "Se listan todos los alumnos"
+                    }
+                }
+            }
+        }
+    }
+}
